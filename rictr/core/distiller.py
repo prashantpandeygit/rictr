@@ -5,7 +5,7 @@ from torch import nn
 
 
 class DistillationStrategy(Protocol):
-    # on how teacher and student outputs are compared to get scaler loss
+    # on how teacher and student outputs are compared to get loss(scaler)
 
     def __call__(
         self,
