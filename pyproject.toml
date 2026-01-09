@@ -1,9 +1,40 @@
 [project]
 name = "rictr"
-version = "0.1.0"
-description = "under development"
+version = "1.0.0"
+description = "knowledge distillation library for pytorch"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["pytorch", "knowledge-distillation", "machine-learning", "deep-learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
-    "torch>=2.9.1",
+    "torch>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+hf = [
+    "transformers>=4.30.0",
+]
+accelerate = [
+    "accelerate>=0.20.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
 ]
