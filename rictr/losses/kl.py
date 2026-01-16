@@ -10,11 +10,8 @@ def kl_divergence(
     temperature: float = 1.0,
     reduction: str = "batchmean",
 ) -> torch.Tensor:
-    """Temperature-scaled KL divergence for logit distillation.
-
-    Computes KL(teacher || student) with temperature scaling.
-    The T^2 factor preserves gradient magnitude across temperatures.
-
+# temperature scaled kl divergence for logit distillation
+    """
     Args:
         student_logits: Student model logits.
         teacher_logits: Teacher model logits.
