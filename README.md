@@ -3,7 +3,7 @@
 #### Documentation
 
 refer to [rictr.in](https://rictr.in)
-
+ 
 #### Implemented Papers
 
 - **Logit Distillation (Soft Targets):** Based on Hinton et al. (2015), [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531).
